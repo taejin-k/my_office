@@ -7,7 +7,11 @@ type Props = {
 const Main = (props: Props) => {
   const { children } = props;
 
-  return <main>{children}</main>;
+  return (
+    <main className='scroll-hidden flex flex-1 flex-wrap overflow-auto px-8 py-6'>
+      <div className='w-full'>{children}</div>
+    </main>
+  );
 };
 
 export default Main;

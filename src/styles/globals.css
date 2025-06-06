@@ -1,15 +1,6 @@
 @import 'tailwindcss';
 
 @layer base {
-  * {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  *::-webkit-scrollbar {
-    display: none;
-  }
-
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -21,5 +12,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .scroll-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scroll-hidden::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -1,7 +1,7 @@
+import '@ant-design/v5-patch-for-react-19';
+
 const Home = () => {
-  const a = 1;
-  console.log('!');
-  return <>김태진</>;
+  return <div>컨텐츠</div>;
 };
 
 export default Home;

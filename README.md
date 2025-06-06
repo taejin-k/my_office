@@ -40,3 +40,5 @@ from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for
 more details.
+
+모달, 네비게이션, validate, 에디터

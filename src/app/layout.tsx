@@ -3,10 +3,11 @@ import Main from '@/components/layout/Main';
 import QueryProvider from '@/queries/QueryProvider';
 import { theme } from '@/styles/theme/config';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, Flex } from 'antd';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import '../styles/globals.css';
+import Navigation from '@/components/layout/Navigation';
 
 export const metadata: Metadata = {
   title: 'My Office',
@@ -20,12 +21,15 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang='en'>
-      <body className={`antialiased`}>
+      <body className='antialiased'>
         <AntdRegistry>
           <ConfigProvider theme={theme}>
             <QueryProvider>
               <Header />
-              <Main>{children}</Main>
+              <Flex className='h-[calc(100vh_-_64px)]'>
+                <Navigation />
+                <Main>{children}</Main>
+              </Flex>
             </QueryProvider>
           </ConfigProvider>
         </AntdRegistry>
